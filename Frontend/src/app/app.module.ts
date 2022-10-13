@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { TokenInterceptorInterceptor } from './services/token-interceptor.interceptor';
 import { AccordionDirective } from './shared/accordion';
 import { GlimpseComponent } from './glimpse/glimpse.component';
+import { CardComponent } from './card/card.component';
 
 const NgxUiLoaderConfig: NgxUiLoaderConfig = {
   text:"Loading...",
@@ -46,7 +47,8 @@ const NgxUiLoaderConfig: NgxUiLoaderConfig = {
     SignupComponent,
     ForgotPasswordComponent,
     LoginComponent,
-    GlimpseComponent
+    GlimpseComponent,
+    CardComponent
     
    ],
   imports: [
