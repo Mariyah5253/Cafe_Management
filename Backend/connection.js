@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
 
 connection.connect((err) => {
     if(!err){
-        console.log("Connected..!");
+        console.log("Connected To Server..!");
     }
     else{
         console.log(err);

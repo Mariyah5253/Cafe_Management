@@ -11,29 +11,39 @@ export class UserService {
   constructor(private httpClient: HttpClient) { }
 
   signup(data: any) {
-    return this.httpClient.post('http://localhost:8080/user/signup', data, {
+    return this.httpClient.post('http://localhost:8080/user/signup/', data, {
       headers: new HttpHeaders().set('Content-Type', "application/json")
     })
   }
 
   forgotPassword(data:any){
-    return this.httpClient.post('http://localhost:8080/user/forgotPassword',data,{
+    return this.httpClient.post('http://localhost:8080/user/forgotPassword/',data,{
       headers: new HttpHeaders().set('Content-Type',"application/json")
     })
   }
 
   login(data:any){
-    return this.httpClient.post('http://localhost:8080/user/login',data,{
+    return this.httpClient.post('http://localhost:8080/user/login/',data,{
       headers: new HttpHeaders().set('Content-Type',"application/json")
     })
   }
 
   checkToken(){
-    return this.httpClient.get('http://localhost:8080/user/checkToken');
+    return this.httpClient.get('http://localhost:8080/user/checkToken/');
   }
 
   changePassword(data:any){
-    return this.httpClient.post('http://localhost:8080/user/changePassword',data,{
+    return this.httpClient.post('http://localhost:8080/user/changePassword/',data,{
+      headers: new HttpHeaders().set('Content-Type',"application/json")
+    })
+  }
+
+  getUsers(){
+    return this.httpClient.get('http://localhost:8080/user/get');
+  }
+
+  update(data:any){
+    return this.httpClient.patch('http://localhost:8080/user/update',data,{
       headers: new HttpHeaders().set('Content-Type',"application/json")
     })
   }

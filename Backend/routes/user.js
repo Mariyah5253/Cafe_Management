@@ -41,7 +41,7 @@ router.post('/login', (req, res) => {
     query = "select email, password, role, status from user where email=?";
     connection.query(query, [user.email], (err, results) => {
         if (!err) {
-            if (results.length <=0 || results[0].password !=user.password) {
+            if (results.length <=0 || results[0].password != user.password) {
                 return res.status(401).json({ message: "Incorrect username or password" });
             }
             else if (results[0].status === 'false') {
@@ -144,7 +144,7 @@ router.post('/changePassword', (req, res) => {
             if (results.length <= 0) {
                 return res.status(400).json({ message: "Incorrect old Password" });
             }
-            else if (results[0].password == user.oldPassword) {
+             if (results[0].password == user.oldPassword) {
                 query = "update user set password=? where email=?";
                 connection.query(query, [user.newPassword, email], (err, results) => {
                     if (!err) {

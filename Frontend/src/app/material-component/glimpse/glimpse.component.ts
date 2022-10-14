@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { cards,Card } from './../../shared/cardData';
 
 @Component({
   selector: 'app-glimpse',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./glimpse.component.scss']
 })
 export class GlimpseComponent implements OnInit {
-
+  car:Card[] = cards;
   constructor() { }
 
   ngOnInit(): void {

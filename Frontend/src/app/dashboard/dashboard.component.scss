@@ -61,7 +61,8 @@ body {
     display: inline-block;
     padding: 8px;
     color: white;
-    background-color: #e53935;
+    // background-color: #e53935;
+    background-color: rgb(189, 157, 132);
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -69,7 +70,7 @@ body {
   }
   
   .button:hover {
-    background-color: #555;
+    background-color: rgb(156, 147, 147);
   }
   
   @media screen and (max-width: 650px) {
@@ -78,3 +79,8 @@ body {
       display: block;
     }
   }
+
+  .mat-toolbar .mat-primary {
+    background: rgb(189, 157, 132);
+    color: white;
+}
