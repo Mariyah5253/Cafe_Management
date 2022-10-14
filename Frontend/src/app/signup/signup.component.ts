@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { SnackbarService } from '../services/snackbar.service';
 import { MatDialogRef } from '@angular/material/dialog';
-import { GlobalConstants } from '../shared/global-constants';
+import { AllConstantsValidation } from '../shared/global-constants';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 
 @Component({
@@ -15,6 +15,7 @@ import { NgxUiLoaderService } from 'ngx-ui-loader';
 export class SignupComponent implements OnInit {
   signupForm:any = FormGroup;
   responseMessage:any;
+  public showPassword: boolean = false;
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
@@ -26,10 +27,10 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.signupForm = this.formBuilder.group({
-      name:[null,[Validators.required,Validators.pattern(GlobalConstants.nameRegex)]],
-      email:[null,[Validators.required,Validators.pattern(GlobalConstants.emailRegex)]],
-      contactNumber:[null,[Validators.required,Validators.pattern(GlobalConstants.contactNumberRegex)]],
-      password:[null,[Validators.required]],
+      name:[null,[Validators.required,Validators.pattern(AllConstantsValidation.nameRegex)]],
+      email:[null,[Validators.required,Validators.pattern(AllConstantsValidation.emailRegex)]],
+      contactNumber:[null,[Validators.required,Validators.pattern(AllConstantsValidation.contactNumberRegex)]],
+      password:[null,[Validators.required,Validators.minLength(8)]]
     })
   }
 
@@ -60,12 +61,16 @@ export class SignupComponent implements OnInit {
         
       }
       else{
-        this.responseMessage = GlobalConstants.genericError;
+        this.responseMessage = AllConstantsValidation.genericError;
         console.log(this.responseMessage);
         
       }
-      this.snackbarService.openSnackBar(this.responseMessage, GlobalConstants.error);
+      this.snackbarService.openSnackBar(this.responseMessage, AllConstantsValidation.error);
     })
+  }
+
+  public togglePasswordVisibility(): void {
+    this.showPassword = !this.showPassword;
   }
 
 }

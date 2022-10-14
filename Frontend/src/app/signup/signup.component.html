@@ -37,10 +37,15 @@
 
             <mat-form-field appearance="fill" fxFlex>
                 <mat-label>Password</mat-label>
-                <input matInput formControlName="password" type="password" required>
+                <input  formControlName="password" matInput [type]="showPassword ? 'text' : 'password'" name="password" minlength="8">
+                <mat-icon matSuffix (click)="togglePasswordVisibility()">
+                    {{showPassword?'visibility_off':'visibility'}}
+                </mat-icon>
                 <mat-error *ngIf="signupForm.controls.password.touched && signupForm.controls.password.invalid">
-                    <span *ngIf="signupForm.controls.password.errors.required">This field is mandatory.</span>
-                    <span *ngIf="signupForm.controls.password.errors.pattern">This field is invalid.</span>
+                    <span *ngIf="signupForm.controls.password.errors.required">This field is required</span>
+                    <span *ngIf="signupForm.controls.password.errors.pattern">This field is invalid</span>
+                    <span *ngIf="signupForm.controls.password.errors.minlength">Password should be minimum 8 characters long </span>
+                    
                 </mat-error>
             </mat-form-field>
         </div>

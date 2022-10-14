@@ -4,7 +4,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { SnackbarService } from 'src/app/services/snackbar.service';
 import { UserService } from 'src/app/services/user.service';
-import { GlobalConstants } from 'src/app/shared/global-constants';
+import { AllConstantsValidation } from 'src/app/shared/global-constants';
 
 @Component({
   selector: 'app-change-password',
@@ -59,11 +59,9 @@ export class ChangePasswordComponent implements OnInit {
         this.responseMessage = error.error?.message;
       }
       else{
-        this.responseMessage = GlobalConstants.genericError;
+        this.responseMessage = AllConstantsValidation.genericError;
       }
-      this.snackbarService.openSnackBar(this.responseMessage,GlobalConstants.error);
+      this.snackbarService.openSnackBar(this.responseMessage,AllConstantsValidation.error);
     })
   }
-
-
 }

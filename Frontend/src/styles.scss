@@ -3,7 +3,6 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-  //responsibe table
   @media(max-width: 800px) {
     .responsive_table {
         overflow-x: auto !important;
@@ -28,8 +27,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: white !important;
   }
 
-  .green-snackbar {
-    background: #32CD32 !important;
+  .pink-snackbar {
+    background: #b36788 !important;
     color: white !important;
   }
 

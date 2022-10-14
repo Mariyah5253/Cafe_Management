@@ -1,18 +1,8 @@
-/*
-Template Name: Material Pro Admin
-Author: Themedesigner
-Email: niravjoshi87@gmail.com
-File: scss
-*/
-// Variables
-// @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
-
 $bodyfont: 'Poppins', sans-serif;
 $headingfont: 'Poppins', sans-serif;
 
 @import '~@angular/material/theming';
 
-/*Material Theme Colors*/
 
 $primary: mat-palette($mat-red, 600);
 $accent: mat-palette($mat-red, 500);
@@ -27,15 +17,10 @@ $custom-typography: mat-typography-config(
   $font-family: 'Poppins, sans-serif'
 );
 
-// Override the typography in the core CSS.
 @include mat-core($custom-typography);
 
-// Default Theme
 @include angular-material-theme($theme);
 
-// Dark Theme
-
-/*Theme Colors*/
 
 $topbar: #2196f3;
 $sidebar: #fff;
@@ -43,7 +28,7 @@ $sidebar-white: #e5edef;
 $sidebar-alt: #f2f6f8;
 $bodycolor: #eef5f9;
 $headingtext: #455a64;
-$bodytext: #67757c;
+$bodytext: #ffffff;
 $sidebar-text: #607d8b;
 $sidebar-icons: #99abb4;
 
@@ -51,16 +36,16 @@ $font-16: 16px;
 
 $light-text: #a6b7bf;
 $themecolor: #1e88e5;
-$themecolor-alt: #e53935;
+$themecolor-alt: rgb(189, 157, 132);
 $themecolor-dark: #028ee1;
 
-/*bootstrap Color*/
+
 $danger: #fc4b6c;
 $success: #26c6da;
 $warning: #ffb22b;
 $primary: #7460ee;
 $info: #1e88e5;
-// $inverse: #2f3d4a;
+
 $inverse: white;
 $muted: #99abb4;
 $dark: #263238;
@@ -68,7 +53,7 @@ $light: #f2f4f8;
 $extra-light: #ebf3f5;
 $secondary: #727b84;
 
-/*Light colors*/
+
 $light-danger: #f9e7eb;
 $light-success: #e8fdf8;
 $light-warning: #fff8ec;
@@ -86,7 +71,7 @@ $red-dark: #d61f1f;
 $inverse-dark: #232a37;
 $dark-transparent: rgba(0, 0, 0, 0.05);
 
-/*Normal Color*/
+
 $white: #ffffff;
 $red: #fb3a3a;
 $yellow: #a0aec4;
@@ -94,7 +79,7 @@ $purple: #7460ee;
 $blue: #02bec9;
 $megna: #00897b;
 
-/*Extra Variable*/
+
 $rgt: right;
 $lft: left;
 $border: rgba(120, 130, 140, 0.13);

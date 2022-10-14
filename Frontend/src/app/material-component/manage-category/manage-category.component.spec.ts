@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BestSellerComponent } from './best-seller.component';
+import { ManageCategoryComponent } from './manage-category.component';
 
-describe('BestSellerComponent', () => {
-  let component: BestSellerComponent;
-  let fixture: ComponentFixture<BestSellerComponent>;
+describe('ManageCategoryComponent', () => {
+  let component: ManageCategoryComponent;
+  let fixture: ComponentFixture<ManageCategoryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BestSellerComponent ]
+      declarations: [ ManageCategoryComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BestSellerComponent);
+    fixture = TestBed.createComponent(ManageCategoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

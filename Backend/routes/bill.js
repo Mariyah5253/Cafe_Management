@@ -59,7 +59,6 @@ router.post('/getPdf',auth.authenticateToken, function(req,res){
                         return res.status(500).json(err);
                     }
                     else{
-                        // return res.status(200).json({ uuid :generatedUuid });
                         res.contentType("application/pdf");
                         fs.createReadStream(pdfPath).pipe(res);
                     }
